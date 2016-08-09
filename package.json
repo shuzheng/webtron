@@ -1,0 +1,22 @@
+{
+  "name": "webtron",
+  "version": "1.0.0",
+  "description": "webtron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuzheng/webtron.git"
+  },
+  "author": "shuzheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuzheng/webtron/issues"
+  },
+  "homepage": "https://github.com/shuzheng/webtron",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}
