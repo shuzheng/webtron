@@ -18,11 +18,13 @@ DEBUG: com.hbdiy.ec.dao.DiyMapper.selectGroupByValueId - ==> Parameters: B0246AB
 </textarea>
 <input id="go" type="button" value="转SQL"/>
 <input id="copy" type="button" value="复制SQL"/>
-<script src="js/jquery-2.2.0.min.js"></script>
 <script>
+let $ = require('jquery');
+const {clipboard} = require('electron');
 $(function() {
 	// 转SQL
 	$('#go').click(function() {
+		console.log('go');
 		var arry = $('#sql').val().split('\n');
 		var sql;
 		var param;
@@ -69,13 +71,11 @@ $(function() {
 		//console.log(sql);
 		$('#result').val(sql);
 	});
-	/*// 复制SQL
-	var gui = require('nw.gui');
-	var clipboard = nw.Clipboard.get();
+	// 复制SQL
 	$('#copy').click(function() {
-		clipboard.set($('#result').val(), 'text');
+		clipboard.writeText($('#result').val());
 		alert('已复制！');
-	});*/
+	});
 });
 </script>
 </body>

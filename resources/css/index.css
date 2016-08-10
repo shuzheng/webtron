@@ -12,7 +12,7 @@ a{font-size:12px;text-decoration:none;-webkit-app-region:no-drag;-webkit-user-dr
 #menubar ul li{float:left;list-style-type:none;overflow:hidden;}
 #menubar ul li a{display:block;}
 
-#main iframe{width:100%;flex:1;}
+#main webview{width:100%;flex:1;}
 
 
 /*

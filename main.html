@@ -11,12 +11,12 @@
 <div id="main">
 	<div id="menubar">
 		<ul>
-			<li><a class="cur" href="app/index/index.html" target="frame">首页</a></li>
-			<li><a href="app/mybatis/mybatis.html" target="frame">Mybatis日志转SQL</a></li>
-			<li><a href="app/html5/html5.html" target="frame">HTML5页面模板</a></li>
+			<li><a class="cur" href="javascript:;" link="app/index/index.html">首页</a></li>
+			<li><a href="javascript:;" link="app/mybatis/mybatis.html">Mybatis日志转SQL</a></li>
+			<li><a href="javascript:;" link="app/html5/html5.html">HTML5页面模板</a></li>
 		</ul>
 	</div>
-	<iframe name="frame" frameborder="0" scrolling="yes" src="app/index/index.html"></iframe>
+	<webview id="webview" src="app/index/index.html" nodeintegration allowpopups></webview>
 </div>
 <script src="resources/skins/skins.js"></script>
 <!-- 菜单栏 -->
@@ -30,6 +30,18 @@ let $ = require('jquery');
 $('#menubar a').mousedown(function() {
 	$('#menubar a').removeClass('cur');
 	$(this).addClass('cur');
+	$('#webview').attr('src', $(this).attr('link'));
+});
+// 打印webview中的日志
+let webview = document.getElementById('webview');
+webview.addEventListener('console-message', (e) => {
+  console.log(e.message);
+});
+webview.addEventListener("did-start-loading", (e) => {
+	console.log('did-start-loading');
+});
+webview.addEventListener("did-stop-loading", (e) => {
+	console.log('did-stop-loading');
 });
 </script>
 </body>
