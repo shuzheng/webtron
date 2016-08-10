@@ -1,6 +1,6 @@
 (function(){
 	// ============== 加载皮肤 ==============
-	var skin = 'chrome';
+	var skin = 'adobe';
 	if(localStorage.skin)
 		skin = localStorage.skin;
 	var head = document.getElementsByTagName('head')[0];
