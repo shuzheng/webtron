@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <head>
 <meta charset="utf-8"/>
 <style>
 #sql,#result{width:100%;height:150px;outline:none;resize:none;}
 #sql:focus,#result:focus{border:1px solid #1583DD;}
 </style>
-<title>mybatis</title>
+<title>Webtron</title>
 </head>
 <body>
 <textarea id="sql">
@@ -69,13 +69,13 @@ $(function() {
 		//console.log(sql);
 		$('#result').val(sql);
 	});
-	// 复制SQL
+	/*// 复制SQL
 	var gui = require('nw.gui');
 	var clipboard = nw.Clipboard.get();
 	$('#copy').click(function() {
 		clipboard.set($('#result').val(), 'text');
 		alert('已复制！');
-	});
+	});*/
 });
 </script>
 </body>
