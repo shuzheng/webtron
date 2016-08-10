@@ -5,7 +5,7 @@
 <link rel="shortcut icon" href="resources/icons/icon.png" id="icon"/>
 <link rel="stylesheet" href="resources/css/public.css"/>
 <link rel="stylesheet" href="resources/css/index.css"/>
-<title>WEB开发者助手</title>
+<title>Webtron</title>
 </head>
 <body>
 <div id="main">
@@ -18,15 +18,19 @@
 	</div>
 	<iframe name="frame" frameborder="0" scrolling="yes" src="app/index/index.html"></iframe>
 </div>
-<script src="resources/js/jquery.min.js"></script>
 <script src="resources/skins/skins.js"></script>
-<!--<script src="resources/js/index.js"></script>-->
 <!-- 菜单栏 -->
 <!--<script src="resources/js/menubar.js"></script>-->
 <!-- 右键菜单 -->
 <!--<script src="resources/js/contextmenu.js"></script>-->
 <script>
-require('./renderer.js')
+require('./renderer');
+// 工具栏
+let $ = require('jquery');
+$('#menubar a').mousedown(function() {
+	$('#menubar a').removeClass('cur');
+	$(this).addClass('cur');
+});
 </script>
 </body>
 </html>
