@@ -18,8 +18,8 @@ function createWindow () {
 	mainWindow = new BrowserWindow({
 		//width: 800,
 		//height: 600,
-		show: false,
-		frame: false
+		//frame: false,
+		show: false
 	});
 
 	// 加载应用的 index.html。
